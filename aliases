@@ -1,0 +1,2 @@
+#If need to run delayed job with the server
+alias startserver='rake jobs:work & rails s'

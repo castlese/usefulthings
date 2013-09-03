@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#this script starts all of the local services needed while developing cash analytics
+
+
+gnome-terminal --tab --title "Cash Analytics Server" -e "~/work/cashanalytics rails s"
+--tab-with-profile="Default" --title="Delayed Job" -e "~work/cashanalytics rake jobs:work"
+--tab-with-profile="Default" --title="Tests" -e "~work/cashanalytics guard"
+--tab-with-profile="Default" --title="Console" -e "~work/cashanalytics rails c"
+--tab-with-profile="Default" --title="Use me" -e "cd ~work/casanalytics"
+
