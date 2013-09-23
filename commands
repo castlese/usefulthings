@@ -1,0 +1,7 @@
+BUNDLER
+
+####Will open the folder of the gem in sublime (or can change vim, gedit etc)####
+
+> export EDITOR=sublime-text-2
+> bundle open [gemname]
+
