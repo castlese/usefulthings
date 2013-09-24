@@ -2,14 +2,25 @@
 
 #this script starts all of the local services needed while developing cash analytics
 
+#open all required terminals and run processes
 cd ~/work/cashanalytics
-gnome-terminal --tab --title="Cashanalytics: rails s" -e "bash -c 'rails s'" --tab-with-profile=Default --title="Delayed Job" -e "bash -c 'rake jobs:work'" --tab-with-profile=Default --title="Console" -e "bash -c 'rails c'" --tab-with-profile=Default --title="Use me!"
-gnome-terminal --tab --title="Cashanalytics: Guard" -e "bash -c 'guard'"
+gnome-terminal --tab --maximize --title="Cashanalytics: rails s" -e "bash -c 'rails s'" --tab-with-profile=Default --title="Delayed Job" -e "bash -c 'rake jobs:work'" --tab-with-profile=Default --title="Console" -e "bash -c 'rails c'" --tab-with-profile=Default --title="Use me!"
+gnome-terminal --tab --maximize --title="Cashanalytics: Guard" -e "bash -c 'guard'"
 
-#TODO: open pgadmin
-#TODO: open Chrome and run lvh.me:3000
-#TODO: open cashanalytics Sublime Folder
-#TODO: choose which screen to open on
-#TODO: maximise all windows as they are opened
+#open Chrome and run local and production
+#TODO: wait until server has started before running these commands
+google-chrome 
+google-chrome http://base.lvh.me:3000
+google-chrome https://base.cashanalytics.com
+
+
+#open cashanalytics Sublime Folder
+subl ~/work/cashanalytics 
+
+#open pgadmin and connect to Cash Analytics DB Server
+pgadmin3 -s CA
+
+
+#TODO: set which monitor each process should open on
 #TODO: close all so that can run similar file for another project
 

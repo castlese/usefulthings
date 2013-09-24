@@ -1,2 +1,5 @@
 #If need to run delayed job with the server
 alias startserver='rake jobs:work & rails s'
+
+alias closeall="WIN_IDs=$(wmctrl -l | awk '$3 != "N/A" {print $1}')
+for i in $WIN_IDs; do wmctrl -ic "$i";"

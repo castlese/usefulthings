@@ -5,3 +5,4 @@ BUNDLER
 > export EDITOR=sublime-text-2
 > bundle open [gemname]
 
+#TODO: add git branch to command prompt and tab title?

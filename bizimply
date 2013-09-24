@@ -1,0 +1,27 @@
+#!/bin/bash
+
+#this script starts all of the local services needed while developing bizimply
+
+#open all required terminals and run processes
+cd ~/work/bizimply
+gnome-terminal --tab --maximize --title="Bizimply: rails s" -e "bash -c 'rails s'" --tab-with-profile=Default --title="Console" -e "bash -c 'rails c'" --tab-with-profile=Default --title="Use me!"
+gnome-terminal --tab --maximize --title="Bizimply: Guard" -e "bash -c 'guard'"
+
+#open Chrome and run local, staging and production
+#TODO: wait until server has started before running these commands
+google-chrome 
+google-chrome http://awesomeness.lvh.me:3000
+google-chrome http://app.shiftlogbook.com
+google-chrome http://app.bizimply.com
+
+
+#open bizimply Sublime Folder
+subl ~/work/cbizimply
+
+#open mysql workbench and connect to Bizimply Development DB
+mysql-workbench --query []
+
+
+#TODO: set which monitor each process should open on
+#TODO: close all so that can run similar file for another project
+
