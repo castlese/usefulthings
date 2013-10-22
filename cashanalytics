@@ -9,18 +9,18 @@ gnome-terminal --tab --maximize --title="Cashanalytics: Guard" -e "bash -c 'guar
 
 #open Chrome and run local and production
 #TODO: wait until server has started before running these commands
-google-chrome 
-google-chrome http://base.lvh.me:3000
-google-chrome https://base.cashanalytics.com
+google-chrome &
+google-chrome http://base.lvh.me:3000 &
+google-chrome https://base.cashanalytics.com &
 
 
 #open cashanalytics Sublime Folder
-subl ~/work/cashanalytics 
+subl ~/work/cashanalytics &
 
-#open pgadmin and connect to Cash Analytics DB Server
-pgadmin3 -s CA
+#open pgadmin and connect to Cash Analytics Server
+pgadmin3 -s CA &
 
 
 #TODO: set which monitor each process should open on
-#TODO: close all so that can run similar file for another project
+#TODO: close all so that can run similar file for another project - use alias closeall - this is set up in my aliases file
 

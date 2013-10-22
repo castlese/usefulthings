@@ -9,19 +9,19 @@ gnome-terminal --tab --maximize --title="Bizimply: Guard" -e "bash -c 'guard'"
 
 #open Chrome and run local, staging and production
 #TODO: wait until server has started before running these commands
-google-chrome 
-google-chrome http://awesomeness.lvh.me:3000
-google-chrome http://app.shiftlogbook.com
-google-chrome http://app.bizimply.com
+google-chrome &
+google-chrome http://awesomeness.lvh.me:3000 &
+google-chrome http://app.shiftlogbook.com &
+google-chrome http://app.bizimply.com &
 
 
 #open bizimply Sublime Folder
-subl ~/work/cbizimply
+subl ~/work/bizimply &
 
 #open mysql workbench and connect to Bizimply Development DB
-mysql-workbench --query []
+mysql-workbench --query [bizimply] &
 
 
 #TODO: set which monitor each process should open on
-#TODO: close all so that can run similar file for another project
+#TODO: close all so that can run similar file for another project  - use alias closeall - this is set up in my aliases file
 
